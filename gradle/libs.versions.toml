@@ -10,6 +10,7 @@ activityCompose = "1.8.2"
 composeBom = "2024.04.00"
 firebaseBom= "32.8.1"
 googleService="4.4.1"
+navigationCompose = "2.7.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +33,8 @@ firebase-analitics = { group = "com.google.firebase", name="firebase-analytics-k
 androidx-material-icons = {group = "androidx.compose.material",name = "material-icons-extended"}
 firebase-firestore-ktx = { group="com.google.firebase",name="firebase-firestore-ktx"}
 com-google-firebase={ group="com.google.firebase",name="firebase-storage"}
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationCompose" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
