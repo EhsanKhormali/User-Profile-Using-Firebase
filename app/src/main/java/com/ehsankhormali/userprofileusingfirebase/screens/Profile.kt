@@ -167,7 +167,7 @@ fun Profile(navController: NavController) {
 
 private fun updateProfilePicture(uri: Uri) {
     val riversRef =
-        FirebaseStorage.getInstance().getReference("profile_pictures/${uri.lastPathSegment}")
+        FirebaseStorage.getInstance().getReference("profile_pictures/${FirebaseAuth.getInstance().currentUser?.uid.toString()}")
     val uploadTask = riversRef.putFile(uri)
 
 // Register observers to listen for when the download is done or if it fails
