@@ -1,5 +1,6 @@
 [versions]
 agp = "8.3.2"
+coilCompose = "2.6.0"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
 junit = "4.13.2"
@@ -11,9 +12,12 @@ composeBom = "2024.04.00"
 firebaseBom= "32.8.1"
 googleService="4.4.1"
 navigationCompose = "2.7.7"
+firebaseFirestoreKtx = "24.11.1"
+firebaseStorageKtx = "20.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -27,14 +31,14 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-material-icons = {group = "androidx.compose.material",name = "material-icons-extended"}
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationCompose" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 firebase-bom = { group= "com.google.firebase",name = "firebase-bom",version.ref="firebaseBom"}
 firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx"}
 firebase-analitics = { group = "com.google.firebase", name="firebase-analytics-ktx"}
-androidx-material-icons = {group = "androidx.compose.material",name = "material-icons-extended"}
-firebase-firestore-ktx = { group="com.google.firebase",name="firebase-firestore-ktx"}
-com-google-firebase={ group="com.google.firebase",name="firebase-storage"}
-androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationCompose" }
-androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+google-firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx" }
+firebase-storage-ktx = { group = "com.google.firebase", name = "firebase-storage-ktx" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

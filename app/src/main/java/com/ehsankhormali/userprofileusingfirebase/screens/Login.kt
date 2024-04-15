@@ -131,7 +131,7 @@ fun Login(navController: NavController){
                 Text(
                     text = "Register",
                     modifier = Modifier.clickable(onClick = {
-                        //navController.navigate(Screens.Register.name)
+                        navController.navigate(Screens.Register.name)
                     }),
                     color = MaterialTheme.colorScheme.primary
                 )

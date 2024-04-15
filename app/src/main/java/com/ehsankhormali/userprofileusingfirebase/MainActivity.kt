@@ -11,7 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.ehsankhormali.userprofileusingfirebase.navigation.Navigation
+import com.ehsankhormali.userprofileusingfirebase.navigation.Screens
 import com.ehsankhormali.userprofileusingfirebase.ui.theme.UserProfileUsingFirebaseTheme
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +35,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ProfileApp(navController: NavHostController =rememberNavController()){
+    val firebaseUser = FirebaseAuth.getInstance().currentUser
+    val startingScreen =
+        if (firebaseUser == null){
+            Screens.Login.name
+        }else{
+            Screens.Profile.name
+        }
+    Navigation(navController = navController, startingScreen = startingScreen)
 }
 
 @Preview(showBackground = true)

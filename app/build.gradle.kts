@@ -62,6 +62,8 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.compose)
+    //coil
+    implementation (libs.coil.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -69,7 +71,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    // Import the BoM for the Firebase platform
     implementation(platform(libs.firebase.bom))
+    implementation(libs.google.firebase.firestore.ktx)
+    implementation(libs.firebase.storage.ktx)
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.analitics)
     implementation(libs.androidx.material.icons)
