@@ -1,0 +1,23 @@
+name: Renovate
+
+on:
+  pull_request:
+      branches:
+        - 'master'
+  schedule:
+    - cron: "0 0 * * *"  # This runs Renovate once a day. Adjust the cron as needed.
+  workflow_dispatch:  # Manual trigger event
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Renovate
+        uses: renovatebot/github-action@v40.2.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          autodiscover: "true"
