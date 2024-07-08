@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "branchPrefix": "dependency_upgrade/",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^com\\.android\\..*", "^org\\.jetbrains\\.kotlin\\..*"],
+      "groupName": "Android and Kotlin Dependencies"
+    }
+  ],
+  "gradle": {
+    "enabled": true,
+    "fileMatch": [
+      "\\.gradle(\\.kts)?$",
+      "(^|/)gradle\\.properties$",
+      "(^|/)gradle/.+\\.toml$",
+      "(^|/)buildSrc/.+\\.kt$",
+      "\\.versions\\.toml$",
+      "(^|/)versions.props$",
+      "(^|/)versions.lock$"
+    ]
+  },
+  "baseBranches": ["master"],
+  "schedule": ["at any time"],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "automerge": true,
+  "automergeType": "pr",
+  "addLabels": ["dependencies", "automerge"]
+}
