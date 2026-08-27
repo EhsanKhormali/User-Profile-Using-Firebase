@@ -11,7 +11,7 @@ firebaseBom= "34.18.0"
 composeBom = "2026.08.00"
 lifecycleRuntimeKtx = "2.11.0"
 googleService="4.5.0"
-navigationCompose = "2.9.8"
+navigationCompose = "2.10.0"
 firebaseFirestoreKtx = "24.11.1"
 firebaseStorageKtx = "20.3.0"
 
